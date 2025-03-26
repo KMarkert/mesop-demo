@@ -4,6 +4,7 @@ from frontend import handlers
 from frontend.state import State
 from frontend.app_classes import Message
 
+
 # Main page definition
 @me.page(
     title="Geospatial Reasoning",
@@ -23,6 +24,7 @@ def main():
     with me.box(
         style=me.Style(
             display="flex",
+            # hi hi2
             flex_direction="column",
             font_family="Google Sans",
             background="#fff" if me.theme_brightness() == "light" else "#121212",
@@ -33,7 +35,6 @@ def main():
             flex_grow=1,
         )
     ):
-
         with me.box(
             style=me.Style(
                 width="80%",
@@ -54,6 +55,7 @@ def main():
                 )
             ):
                 chat_input()
+
 
 def chat_content():
     state = me.state(State)
@@ -80,7 +82,8 @@ def chat_content():
 
                 elif state.messages[i].role == "user":
                     user_content(state.messages[i])
-                
+
+
 def user_content(
     message: Message,
 ):
@@ -111,6 +114,7 @@ def user_content(
                 ),
             )
 
+
 def assistant_content(
     message: Message,
     show_loader: bool = False,
@@ -136,6 +140,7 @@ def assistant_content(
                     color="black" if me.theme_brightness() == "light" else "white",
                 ),
             )
+
 
 def chat_input():
     state = me.state(State)

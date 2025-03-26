@@ -9,7 +9,7 @@ Install the dependencies:
 uv sync
 ```
 
-Change directories to the frontend application: `cd src/frontend`
+Change directories to the frontend application: `cd src`
 
 Run the app:
 
